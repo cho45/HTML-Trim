@@ -28,6 +28,18 @@ sub htrim {
 __END__
 ===
 --- input htrim
+あああいいい
+--- expected
+あああい...
+
+===
+--- input htrim
+aaaaaa
+--- expected
+aaaa...
+
+===
+--- input htrim
 あああ<a href="hoge">いい</a>
 --- expected
 あああ<a href="hoge">いい</a>
