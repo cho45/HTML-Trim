@@ -116,15 +116,30 @@ __END__
 
 =head1 NAME
 
-HTML::Trim -
+HTML::Trim - HTML trimmer
 
 =head1 SYNOPSIS
 
   use HTML::Trim;
 
+  my $trimmed = HTML::Trim::vtrim('foo bar <a href="/">baz</a> fumino', 10, '…');
+  #=> 'foo bar <a href="hoge">b</a>...'
+
 =head1 DESCRIPTION
 
-HTML::Trim is
+HTML::Trim is for trimming text by the number of character length or visual width (consider full-width characters).
+
+=over
+
+=item C<HTML::Trim::trim($html, $length, $terminal)>
+
+Trim C<$html> by character C<$length>. When result is clipped, add C<$terminal> to result HTML.
+
+=item C<HTML::Trim::vtrim($html, $width, $terminal)>
+
+Trim C<$html> by character C<$width> (half-width = 1). When result is clipped, add C<$terminal> to result HTML.
+
+=back
 
 =head1 AUTHOR
 

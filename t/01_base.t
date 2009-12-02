@@ -92,3 +92,10 @@ aaaa...
 <div>aaaaaa<a href="hoge">iiiiii
 --- expected
 <div>aaaaaa<a href="hoge">iii</a></div>...
+===
+
+--- input hvtrim
+foo bar <a href="hoge">baz</a> fumino
+--- expected
+foo bar <a href="hoge">b</a>...
+
