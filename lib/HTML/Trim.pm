@@ -6,7 +6,6 @@ our $VERSION = '0.01';
 
 use Exporter::Lite;
 use HTML::Parser;
-use UNIVERSAL::require;
 use Unicode::EastAsianWidth;
 
 our @EXPORT_OK = qw(htrim hvtrim);
