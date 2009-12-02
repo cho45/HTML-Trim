@@ -24,6 +24,13 @@ sub htrim {
 	HTML::Trim::trim($str, $max || 5, $delim || "...");
 }
 
+sub hvtrim {
+	my $str  = $_;
+	my $args = filter_arguments || '';
+	my ($max, $delim) = split /\s*,\s*/, $args;
+	HTML::Trim::vtrim($str, $max || 10, $delim || "...");
+}
+
 
 __END__
 ===
@@ -74,3 +81,14 @@ aaaa...
 --- expected
 <div>あああ<a href="hoge">い</a></div>...
 
+===
+--- input hvtrim
+<div>あああ<a href="hoge">いいい
+--- expected
+<div>あああ<a href="hoge">い</a></div>...
+
+===
+--- input hvtrim
+<div>aaaaaa<a href="hoge">iiiiii
+--- expected
+<div>aaaaaa<a href="hoge">iii</a></div>...
