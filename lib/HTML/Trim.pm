@@ -2,7 +2,7 @@ package HTML::Trim;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Exporter::Lite;
 use HTML::Parser;
