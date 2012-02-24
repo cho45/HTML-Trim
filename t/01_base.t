@@ -82,6 +82,12 @@ aaaa...
 <div>あああ<a href="hoge">い</a></div>...
 
 ===
+--- input htrim
+&lt;script>alert("あああ")&lt;/script>
+--- expected
+&lt;...
+
+===
 --- input hvtrim
 <div>あああ<a href="hoge">いいい
 --- expected
@@ -99,3 +105,8 @@ foo bar <a href="hoge">baz</a> fumino
 --- expected
 foo bar <a href="hoge">b</a>...
 
+===
+--- input hvtrim
+&lt;script>alert("aaa")&lt;/script>
+--- expected
+&lt;scrip...

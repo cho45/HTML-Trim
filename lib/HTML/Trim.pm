@@ -94,7 +94,7 @@ sub _trim {
 					$ret .= $text;
 				}
 				$count += $length
-			}, 'dtext'],
+			}, 'text'],
 		}
 	);
 	$p->parse($str);
