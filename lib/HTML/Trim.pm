@@ -125,7 +125,7 @@ HTML::Trim - HTML trimmer
   use HTML::Trim;
 
   my $trimmed = HTML::Trim::vtrim('foo bar <a href="/">baz</a> fumino', 10, '…');
-  #=> 'foo bar <a href="hoge">b</a>...'
+  #=> 'foo bar <a href="hoge">b</a>…'
 
 =head1 DESCRIPTION
 
